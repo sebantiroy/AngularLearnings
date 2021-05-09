@@ -1,0 +1,26 @@
+<html>
+  <h2>Hellow world</h2>
+  <p><b>{{title}}</b>: {{movies}}</p>
+
+<h1>{{title}}</h1>
+  <h2>{{title1}}</h2>
+  <h5 *ngIf="employee">
+     Id: {{employee[0].id}}<br>
+    <b> Name</b>: {{employee[0].name}}<br>
+     <b>Salary</b>: {{employee[0].salary|currency : "€"}}<br>
+     <b>Permanent</b>: {{employee[0].permanent}}<br>
+     <b>Department Id</b>: {{employee[0].departmentId}}<br>
+     <b>Department Name</b>: {{employee[0].departmentName}}<br>
+     Skills:
+  </h5>
+  <tr>
+    <th><label>Skill Id</label></th>
+    <th><label>Skill Name</label></th>
+  </tr>
+  <tr *ngFor="let s of skills">
+    <td>{{s.id}}</td>
+    <td>{{s.name}}</td>
+  </tr>
+    
+<h4>Date of birth:{{today|date:'mediumDate'}}</h4>
+  </html>
